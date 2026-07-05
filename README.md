@@ -82,10 +82,36 @@ LoanWise is a bank loan portfolio optimization system that helps maximize expect
 LoanWise/
 │
 ├── backend/
+│   ├── main.cpp
+│   ├── greedy.cpp
+│   ├── greedy.h
+│   ├── dp.cpp
+│   ├── dp.h
+│   ├── utils.cpp
+│   ├── utils.h
+│   └── Makefile
+│
 ├── frontend/
-│   └── streamlit_app.py
+│   ├── streamlit_app.py
+│   └── requirements.txt
+│
 ├── data/
+│   ├── data2.csv
+│   ├── data3.csv
+│   ├── data4.csv
+│   ├── data5.csv
+│   └── Error_Handling.csv      
+│
 ├── images/
+│   ├── 01_home.png
+│   ├── 02_csv_upload.png
+│   ├── 03_file_preview.png
+│   ├── 04_portfolio_summary.png
+│   ├── 05_loan_distribution.png
+│   ├── 06_alternative_plan.png
+│   ├── 07_technical_analysis.png
+│   └── 08_comparison_chart.png
+│
 ├── .gitignore
 ├── LICENSE
 ├── README.md
