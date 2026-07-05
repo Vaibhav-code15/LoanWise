@@ -1,220 +1,160 @@
+<div align="center">
 
 # 🏦 LoanWise
 
-### Smart Bank Loan Portfolio Optimization System
-
-**C++ Algorithm Engine · Python Streamlit Dashboard · Greedy Algorithm · Dynamic Programming (0/1 Knapsack)**
+<p>A bank loan portfolio optimizer that compares Greedy and Dynamic Programming side by side.</p>
 
 ![C++](https://img.shields.io/badge/C%2B%2B-17-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.32%2B-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7%2B-11557C?style=for-the-badge&logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-[![GitHub](https://img.shields.io/badge/GitHub-Vaibhav--code15-181717?style=flat-square&logo=github)](https://github.com/Vaibhav-code15)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vaibhav%20Khandelwal-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/vaibhav-khandelwal-5a532b28a/)
-
----
-
-## 📌 Overview
-
-LoanWise is a bank loan portfolio optimization system that helps maximize expected annual interest income while staying within a fixed lending budget. It compares a **Greedy Algorithm** with **Dynamic Programming (0/1 Knapsack)** and presents the results through an interactive Streamlit dashboard.
+</div>
 
 ---
 
-## ✨ Features
+## What is this?
 
-- Loan portfolio optimization using Greedy and Dynamic Programming
-- Interactive Streamlit dashboard
-- CSV-based applicant upload
-- Portfolio KPI dashboard
-- Loan allocation insights
-- Algorithm comparison
-- Technical analysis section
-- JSON communication between Python and C++
-- Input validation and error handling
+Banks get more loan requests than they can fund. LoanWise finds the best combination of loans to approve — maximizing profit without exceeding the budget.
+
+It solves the **0/1 Knapsack problem** two ways and lets you compare the results:
+
+| Algorithm | Time Complexity | Always Optimal? |
+|-----------|----------------|-----------------|
+| Greedy | O(n log n) | ❌ |
+| Dynamic Programming | O(n × W) | ✅ |
 
 ---
 
-## 🖥️ Screenshots
+## Screenshots
 
-### 1. Home – Upload CSV & Set Budget
+### Home
 ![Home](images/01_home.png)
 
----
-
-### 2. CSV Upload
+### Upload CSV
 ![CSV Upload](images/02_csv_upload.png)
 
----
-
-### 3. File Preview
+### File Preview
 ![File Preview](images/03_file_preview.png)
 
----
-
-### 4. Portfolio Summary
+### Portfolio Summary
 ![Portfolio Summary](images/04_portfolio_summary.png)
 
----
-
-### 5. Loan Distribution
+### Loan Distribution
 ![Loan Distribution](images/05_loan_distribution.png)
 
----
-
-### 6. Alternative Plan
+### Alternative Plan
 ![Alternative Plan](images/06_alternative_plan.png)
 
----
-
-### 7. Technical Analysis
+### Technical Analysis — Greedy vs DP
 ![Technical Analysis](images/07_technical_analysis.png)
 
----
-
-### 8. Expected Return Comparison
+### Expected Return Comparison
 ![Comparison Chart](images/08_comparison_chart.png)
 
 ---
 
-## 🗂️ Project Structure
+## How it works
 
-```text
+```
+You upload a CSV  →  Python calls C++ binary  →  C++ runs both algorithms
+→  returns JSON  →  Streamlit renders the dashboard
+```
+
+The C++ engine handles all the computation and outputs a clean JSON response. Python doesn't touch the algorithm logic — it just sends data in and displays what comes back.
+
+---
+
+## Project structure
+
+```
 LoanWise/
-│
 ├── backend/
-│   ├── main.cpp
-│   ├── greedy.cpp
-│   ├── greedy.h
-│   ├── dp.cpp
-│   ├── dp.h
-│   ├── utils.cpp
-│   ├── utils.h
+│   ├── main.cpp          ← entry point, reads CSV, outputs JSON
+│   ├── greedy.cpp/h      ← greedy algorithm
+│   ├── dp.cpp/h          ← 0/1 knapsack DP
+│   ├── utils.cpp/h       ← CSV parser, data structs, JSON helpers
 │   └── Makefile
-│
 ├── frontend/
-│   ├── streamlit_app.py
+│   ├── streamlit_app.py  ← the entire dashboard
 │   └── requirements.txt
-│
-├── data/
-│   ├── data2.csv
-│   ├── data3.csv
-│   ├── data4.csv
-│   ├── data5.csv
-│   └── Error_Handling.csv      
-│
-├── images/
-│   ├── 01_home.png
-│   ├── 02_csv_upload.png
-│   ├── 03_file_preview.png
-│   ├── 04_portfolio_summary.png
-│   ├── 05_loan_distribution.png
-│   ├── 06_alternative_plan.png
-│   ├── 07_technical_analysis.png
-│   └── 08_comparison_chart.png
-│
+├── data/                 ← sample CSV files to test with
+├── images/               ← screenshots
 ├── .gitignore
 ├── LICENSE
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## ⚙️ How It Works
+## Getting Started
 
-1. Upload a CSV containing loan applicants.
-2. Set the available bank budget.
-3. Python invokes the C++ optimization engine.
-4. Greedy and Dynamic Programming algorithms are executed.
-5. Results are returned as JSON.
-6. Streamlit visualizes KPIs, charts, selected applicants, and algorithm comparison.
-
----
-
-## 🚀 Getting Started
-
-### 1. Compile the C++ backend
+**1. Compile the C++ backend**
 
 ```bash
 cd backend
 g++ -std=c++17 -O2 -o loan_optimizer main.cpp greedy.cpp dp.cpp utils.cpp
 ```
 
-### 2. Install dependencies
+> Windows: use `loan_optimizer.exe` as the output name
+
+**2. Install dependencies**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Launch the application
+**3. Run**
 
 ```bash
 cd frontend
 streamlit run streamlit_app.py
 ```
 
----
-
-## 🧠 Algorithms Used
-
-| Algorithm | Complexity | Optimal |
-|-----------|------------|---------|
-| Greedy | O(n log n) | No |
-| Dynamic Programming (0/1 Knapsack) | O(n × W) | Yes |
+Opens at `http://localhost:8501`
 
 ---
 
-## 🛠️ Tech Stack
-
-- C++17
-- Python
-- Streamlit
-- Pandas
-- Matplotlib
-- JSON
-- Dynamic Programming
-- Greedy Algorithm
-
----
-
-## 📄 CSV Format
+## CSV Format
 
 ```csv
 id,loan_amount,interest_rate,credit_score
 1,50000,7.5,720
-2,30000,8.0,690
+2,30000,9.0,680
 ```
 
----
-
-## 📚 Concepts Demonstrated
-
-- Design and Analysis of Algorithms
-- Greedy Algorithms
-- Dynamic Programming
-- 0/1 Knapsack
-- C++ and Python Integration
-- JSON-based Communication
-- Data Visualization
-- Software Engineering
+Sample files are in the `data/` folder. Start with `data5.csv`.
 
 ---
 
-## 📃 License
+## Troubleshooting
 
-This project is licensed under the MIT License.
+| Problem | Fix |
+|---------|-----|
+| "Engine Not Found" | Compile the C++ backend first |
+| `g++ not found` | Windows: install [MinGW](https://www.mingw-w64.org/) · Linux: `sudo apt install g++` |
+| `ModuleNotFoundError` | `pip install -r requirements.txt` |
+| Blank page | Wait 5–10 seconds on first load |
 
 ---
 
-## 👤 Author
+## License
 
-**Vaibhav Khandelwal**
+MIT — free to use and modify. See [LICENSE](LICENSE).
 
-B.Tech Computer Science Engineering  
-Jaypee Institute of Information Technology, Noida
+---
 
-**GitHub:** https://github.com/Vaibhav-code15
+<div align="center">
 
-**LinkedIn:** https://www.linkedin.com/in/vaibhav-khandelwal-5a532b28a/
+**Vaibhav Khandelwal**  
+B.Tech CSE · Jaypee Institute of Information Technology, Noida
 
-⭐ If you found this project useful, consider giving it a star.
+[![GitHub](https://img.shields.io/badge/GitHub-Vaibhav--code15-181717?style=for-the-badge&logo=github)](https://github.com/Vaibhav-code15)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vaibhav%20Khandelwal-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/vaibhav-khandelwal-5a532b28a/)
+
+*If this helped you, a star would mean a lot ⭐*
+
+</div>
