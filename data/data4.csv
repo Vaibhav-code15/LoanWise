@@ -1,0 +1,4 @@
+id,loan_amount,interest_rate,credit_score
+1,50000,8.0,700
+2,50000,9.0,710
+3,100000,7.5,720

@@ -1,0 +1,57 @@
+# ── Compiled C++ binaries ─────────────────────────────
+backend/loan_optimizer
+backend/loan_optimizer.exe
+backend/*.o
+backend/*.out
+
+# ── Python cache ──────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+.Python
+
+# ── Virtual environments ──────────────────────────────
+venv/
+env/
+.env/
+.venv/
+ENV/
+
+# ── Streamlit cache ───────────────────────────────────
+.streamlit/
+
+# ── Temporary files created by the app ───────────────
+*.tmp
+tmp_*.csv
+
+# ── OS files ──────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# ── IDE / Editor files ────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+*~
+
+# ── Build artifacts ───────────────────────────────────
+build/
+dist/
+*.egg-info/
+
+# ── Internal / college documents ─────────────────────
+Viva.docx
+*.docx
+notes/
+
+# ── Environment variables ─────────────────────────────
+.env
+.env.local
