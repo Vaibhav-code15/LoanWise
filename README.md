@@ -43,6 +43,12 @@ This is a real-world application of the **0/1 Knapsack Problem**, solved and com
 
 ---
 
+### 2. CSV Upload
+
+![CSV Upload](images/02_csv_upload.png)
+
+---
+
 ### 2. File Preview — Loaded Applicants
 ![File Preview](images/03_file_preview.png)
 
