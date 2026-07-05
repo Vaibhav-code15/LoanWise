@@ -49,7 +49,7 @@ This is a real-world application of the **0/1 Knapsack Problem**, solved and com
 ---
 
 ### 3. Portfolio Summary — KPI Dashboard
-![Portfolio Summary](images/02_portfolio_summary.png)
+![Portfolio Summary](images/04_portfolio_summary.png)
 
 ---
 
