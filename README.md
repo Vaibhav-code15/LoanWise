@@ -44,37 +44,32 @@ This is a real-world application of the **0/1 Knapsack Problem**, solved and com
 ---
 
 ### 2. File Preview — Loaded Applicants
-![File Preview](images/02_file_preview.png)
+![File Preview](images/03_file_preview.png)
 
 ---
 
 ### 3. Portfolio Summary — KPI Dashboard
-![Portfolio Summary](images/03_portfolio_summary.png)
+![Portfolio Summary](images/02_portfolio_summary.png)
 
 ---
 
 ### 4. Loan Distribution Insight
-![Loan Distribution](images/04_loan_distribution.png)
+![Loan Distribution](images/05_loan_distribution.png)
 
 ---
 
 ### 5. Alternative Plan (Greedy Result)
-![Alternative Plan](images/05_alternative_plan.png)
+![Alternative Plan](images/06_alternative_plan.png)
 
 ---
 
 ### 6. Technical Analysis — Greedy vs DP
-![Technical Analysis](images/06_technical_analysis.png)
+![Technical Analysis](images/07_technical_analysis.png)
 
 ---
 
 ### 7. Expected Return Comparison Chart
-![Comparison Chart](images/07_comparison_chart.png)
-
----
-
-### 8. Full Results View
-![Full Results](images/08_results_full.png)
+![Comparison Chart](images/08_comparison_chart.png)
 
 ---
 
