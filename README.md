@@ -153,7 +153,7 @@ MIT — free to use and modify. See [LICENSE](LICENSE).
 B.Tech CSE · Jaypee Institute of Information Technology, Noida
 
 [![GitHub](https://img.shields.io/badge/GitHub-Vaibhav--code15-181717?style=for-the-badge&logo=github)](https://github.com/Vaibhav-code15)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vaibhav%20Khandelwal-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/vaibhav-khandelwal-5a532b28a/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Vaibhav%20Khandelwal-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/vaibhavkhandelwal15/)
 
 *If this helped you, a star would mean a lot ⭐*
 
